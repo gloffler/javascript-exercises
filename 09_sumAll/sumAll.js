@@ -1,5 +1,6 @@
 const sumAll = function(first, second) {
-    if (isNaN(first) || isNaN(second)) return "Error";
+    if (!Number.isInteger(first) || !Number.isInteger(second)) return "ERROR";
+    if (first < 0 || second < 0) return "ERROR";
 
     const min = first < second ? first : second;
     const max = first > second ? first : second;
